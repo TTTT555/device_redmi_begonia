@@ -369,5 +369,9 @@ PRODUCT_PACKAGES += \
 # MediaTek IMS
 $(call inherit-product, vendor/mediatek/ims/mtk-ims.mk)
 
+# XiaomiParts
+PRODUCT_PACKAGES += \
+     XiaomiParts
+
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/begonia/begonia-vendor.mk)
