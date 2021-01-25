@@ -160,5 +160,9 @@ PRODUCT_SOONG_NAMESPACES +=  \
     $(DEVICE_PATH) \
     $(MTK_HALS_PATH)
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    system/lib/libcameraservice.so|libmedia_jni_shim.so
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/begonia/BoardConfigVendor.mk
