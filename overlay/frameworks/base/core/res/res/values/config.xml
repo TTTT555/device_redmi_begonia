@@ -40,9 +40,10 @@
 
     <!-- If true, the doze component is not started until after the screen has been turned off
          and the screen off animation has been performed. -->
-    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
-    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- If AOD can show an ambient version of the wallpaper -->
+    <bool name="config_dozeSupportsAodWallpaper">false</bool>
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
     <bool name="config_dynamic_bind_ims">true</bool>
@@ -134,7 +135,7 @@
 
     <!-- Delay that allows some content to arrive at the display before switching
          from DOZE to ON, in millis. -->
-    <integer name="config_wakeUpDelayDoze">32</integer>
+    <integer name="config_wakeUpDelayDoze">150</integer>
 
     <!-- Height of the status bar -->
     <dimen name="status_bar_height_portrait">78.0px</dimen>
@@ -146,7 +147,7 @@
 	<dimen name="rounded_corner_radius">7.5dp</dimen>
 
     <!-- Screen brightness when dozing. -->
-    <integer name="config_screenBrightnessDoze">13</integer>
+    <integer name="config_screenBrightnessDoze">32</integer>
 
     <!-- Whether the display blanks itself when going from a doze to a non-doze state -->
     <bool name="config_displayBlanksAfterDoze">true</bool>
@@ -522,6 +523,15 @@
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
-   
+	
+    <!-- Amount of time it takes for the light sensor to warm up in milliseconds.
+         For this time after the screen turns on, the Power Manager
+         will not debounce light sensor readings  -->
+    <integer name="config_lightSensorWarmupTime">240</integer>
+
+    <!-- Whether device supports sensor based doze customizations -->
+    <bool name="config_dozePulsePickup">true</bool>
+    <bool name="config_dozePulseTilt">true</bool>
+    <bool name="config_dozePulseProximity">true</bool>
 
 </resources>
