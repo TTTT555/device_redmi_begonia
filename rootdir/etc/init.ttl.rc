@@ -1,0 +1,16 @@
+on boot
+    start ttl64set1
+    start ttl64set2
+
+# Set fix TTL64
+service ttl64set1 /system/bin/iptables -t mangle -A POSTROUTING -j TTL --ttl-set 64
+	class main
+	user root
+	seclabel u:r:su:s0
+	oneshot
+
+service ttl64set2 /system/bin/ip6tables -t mangle -A POSTROUTING -j HL —hl-set 64
+	class main
+	user root
+	seclabel u:r:su:s0
+	oneshot
