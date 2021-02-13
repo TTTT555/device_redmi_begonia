@@ -482,6 +482,16 @@
         <fqname>@1.2::IEmd/EmHidlServer</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.mediatek.hardware.keyinstall</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IKeyinstall</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IKeyinstall/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.mediatek.hardware.keymaster_attestation</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -841,5 +851,14 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IVSIMService/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.gpu</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IGraphicExt</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </manifest>
