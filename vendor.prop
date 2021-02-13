@@ -82,6 +82,7 @@ ro.surface_flinger.max_frame_buffer_acquired_buffers=9
 ro.surface_flinger.vsync_event_phase_offset_ns=2000000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 ro.surface_flinger.running_without_sync_framework=true
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
@@ -111,6 +112,9 @@ debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 vendor.mtk_thumbnail_optimization=true
+ro.vendor.mediatek.rsc_name=default
+ro.vendor.sys.current_rsc_path=/system/etc/rsc/begonia
+ro.vendor.vnd.current_rsc_path=/vendor/etc/rsc/begonia
 
 # Mediatek (Misc)
 debug.mediatek.disp_decompress=1
