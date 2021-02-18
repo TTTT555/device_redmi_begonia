@@ -24,6 +24,8 @@ ro.audio.silent=0
 vendor.audio.spkcal.copy.inhal=true
 audio.offload.disable=1
 audio.deep_buffer.media=true
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
 
 # Background
 persist.vendor.heavy.loading.support=1
