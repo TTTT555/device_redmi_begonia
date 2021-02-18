@@ -43,14 +43,17 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Fingerprint
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.210105.003/7005429:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys"
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="coral-user 11 RQ1A.210105.003 7005429 release-keys" \
+    PRIVATE_BUILD_DESC="coral-user 11 RQ1A.210205.004 7038034 release-keys" \
     PRODUCT_NAME="begonia" \
     TARGET_DEVICE="begonia"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2021-02-05
