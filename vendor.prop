@@ -1,3 +1,4 @@
+
 # ADB
 persist.adb.nonblocking_ffs=0
 
@@ -12,12 +13,20 @@ persist.vendor.audio.button_jack.switch=0
 ro.vendor.audio.game.effect=false
 ro.vendor.audio.sos=true
 #ro.vendor.audio.soundfx.type=mi
+#ro.vendor.audio.soundfx.usb=true
 ro.vendor.audio.voice.volume.boost=manual
 ro.vendor.mtk_audio_alac_support=1
 ro.vendor.mtk_audio_ape_support=1
 ro.vendor.mtk_audio_tuning_tool_ver=V2.2
 ro.vendor.mtk_besloudness_support=1
 ro.vendor.mtk_hifiaudio_support=1
+ro.camera.sound.forced=0
+ro.audio.silent=0
+vendor.audio.spkcal.copy.inhal=true
+audio.offload.disable=1
+audio.deep_buffer.media=true
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
 
 # Background
 persist.vendor.heavy.loading.support=1
@@ -111,6 +120,9 @@ debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 media.stagefright.thumbnail.prefer_hw_codecs=true
 vendor.mtk_thumbnail_optimization=true
+#ro.vendor.mediatek.rsc_name=default
+#ro.vendor.sys.current_rsc_path=/system/etc/rsc/begonia
+#ro.vendor.vnd.current_rsc_path=/vendor/etc/rsc/begonia
 
 # Mediatek (Misc)
 debug.mediatek.disp_decompress=1
