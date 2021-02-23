@@ -27,7 +27,7 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
-    <bool name="config_camera_sound_forced">true</bool>
+    <bool name="config_camera_sound_forced">false</bool>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
@@ -74,7 +74,7 @@
     <bool name="config_hotswapCapable">true</bool>
 
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
-    <integer name="config_safe_media_volume_index">18</integer>
+    <integer name="config_safe_media_volume_index">20</integer>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
@@ -153,7 +153,7 @@
     <integer name="config_wakeUpDelayDoze">32</integer>
 
     <!-- Height of the status bar -->
-    <dimen name="status_bar_height_portrait">78.0px</dimen>
+    <dimen name="status_bar_height_portrait">27.629974dp</dimen>
     <dimen name="status_bar_height_landscape">24.0dp</dimen>
 
     <!-- Rounded corner padding and radius -->
