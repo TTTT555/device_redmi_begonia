@@ -93,6 +93,12 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
+    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+    <integer-array name="config_availableColorModes">
+        <item>0</item>
+        <item>1</item>
+    </integer-array>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
