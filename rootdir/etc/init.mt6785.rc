@@ -864,6 +864,8 @@ on boot
     chmod 0660 /proc/cpufreq/cpufreq_power_mode
     chown system system /proc/cpufreq/enable_hw_gov
     chmod 0660 /proc/cpufreq/enable_hw_gov
+    write /sys/devices/system/cpu/cpufreq/schedutil/up_rate_limit_us 10000
+    write /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us 500
 
 # BW monitor
     chown system system /proc/fliperfs/cg_enable
