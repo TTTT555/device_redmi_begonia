@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     libvulkan
 
+# mtk virtual display enhance
+#PRODUCT_PACKAGES += libvd_enhance
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
