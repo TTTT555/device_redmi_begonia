@@ -76,4 +76,5 @@ void vendor_load_properties() {
     }
 
     property_override("ro.oem_unlock_supported", "0");
+	property_set("camera.gcam64.enable", "0");
 }

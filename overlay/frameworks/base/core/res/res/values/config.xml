@@ -42,7 +42,7 @@
          and the screen off animation has been performed. -->
     <bool name="config_dozeAfterScreenOffByDefault">true</bool>
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+    <bool name="config_dozeAlwaysOnEnabled">true</bool>
 
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
     <bool name="config_dynamic_bind_ims">true</bool>
@@ -356,7 +356,7 @@
 
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
-    <string name="config_wifi_tcp_buffers">524288,1048576,4194304,262144,524288,3670016</string>
+    <string name="config_wifi_tcp_buffers" translatable="false">1730560,3461120,6922240,524288,1048576,4525824</string>
     <string name="config_wlan_data_service_package">com.android.phone</string>
     <string name="config_wlan_network_service_package">com.android.phone</string>
 
@@ -531,7 +531,7 @@
          This resource should be set to "true" when a doze component has been specified
          to maximize power savings but not all devices support it.
          Refer to autosuspend.h for details. -->
-   <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
+   <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
    
    <!-- Smart charging -->
     <bool name="config_SmartChargingAvailable">true</bool>
@@ -562,6 +562,24 @@
          the content may be blanked.
          This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
          flag is set for wifi displays. -->
-    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
+
+    <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
+    <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
+
+     <!-- Power Management: Specifies whether to decouple the interactive state of the
+         device from the display on/off state.
+          When false, setInteractive(..., true) will be called before the display is turned on
+         and setInteractive(..., false) will be called after the display is turned off.
+         This mode provides best compatibility for devices that expect the interactive
+         state to be tied to the display state.
+          When true, setInteractive(...) will be called independently of whether the display
+         is being turned on or off.  This mode enables the power manager to reduce
+         clocks and disable the touch controller while the display is on.
+          This resource should be set to "true" when a doze component has been specified
+         to maximize power savings but not all devices support it.
+          Refer to power.h for details.
+    -->
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
 </resources>
