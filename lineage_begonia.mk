@@ -25,7 +25,7 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/ANXCamera/config.mk)
-$(call inherit-product, vendor/burial9/config.mk)
+$(call inherit-product, vendor/burial10/config.mk)
 $(call inherit-product, vendor/viper4androidFX/config.mk)
 
 # Screen density
