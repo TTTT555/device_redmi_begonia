@@ -195,6 +195,30 @@ on post-fs
     symlink /dev/block/platform/bootdevice/by-name/preloader_b /dev/block/platform/bootdevice/by-name/preloader_ufs_b
 
 on post-fs-data
+    mkdir /data/system 0775 system system
+    mkdir /data/system/mcd 0755 system system
+    mkdir /data/system/whetstone 0770 system system
+    mkdir /data/system/migt 0777 system system
+    restorecon_recursive /data/system/mcd
+    restorecon_recursive /data/system/whetstone
+    restorecon_recursive /data/system/migt
+    restorecon /sys/kernel/debug/system_stats
+    restorecon /sys/kernel/debug/msm_subsys/modem
+    chmod 0777 /data/system/migt
+    chmod 0777 /data/system/migt/migt
+
+on post-fs-data
+    chown system system /sys/hwconf
+    chown system system /sys/hwconf/hw_info
+    chown system system /sys/hwconf/hw_mon
+    restorecon_recursive /sys/hwconf
+
+on post-fs-data
+    restorecon_recursive /sys/kernel/debug/rtmm
+    restorecon_recursive /sys/kernel/debug/ktrace
+    restorecon_recursive /sys/kernel/debug/kperfevents
+    restorecon /sys/kernel/debug/extfrag/extfrag_index
+
     write /proc/bootprof "INIT:post-fs-data"
 
     # boot time fs tune
