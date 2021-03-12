@@ -1,0 +1,16 @@
+cc_library_shared {
+    name: "libdisplayshim",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "libdisplayshim.cpp",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wextra",
+        "-Wall",
+    ],
+    shared_libs: [
+        "libutils",
+    ],
+}
