@@ -46,13 +46,13 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Fingerprint
-BUILD_FINGERPRINT := "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys"
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="begonia-user 10 QP1A.190711.020 V11.0.2.0.QGGEUXM release-keys" \
+    PRIVATE_BUILD_DESC="coral-user 11 RQ1A.210205.004 7038034 release-keys" \
     PRODUCT_NAME="begonia" \
     TARGET_DEVICE="begonia"
 

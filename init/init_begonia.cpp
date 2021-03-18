@@ -22,7 +22,7 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-using android::base::SetProperty;
+using android::init::property_set;
 
 void property_override(char const prop[], char const value[])
 {
@@ -36,24 +36,30 @@ void property_override(char const prop[], char const value[])
 }
 
 void load_begoniaglobal() {
-        property_override("ro.build.fingerprint", "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys");
+        property_override("ro.build.fingerprint", "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys");
         property_override("ro.product.board", "begonia");
         property_override("ro.product.device", "begonia");
-        property_override("ro.product.model", "Redmi Note 8 pro");
+        property_override("ro.product.model", "Redmi Note 8 Pro");
+        property_override("ro.product.system.model", "Redmi Note 8 Pro");
+        property_override("ro.product.vendor.model", "Redmi Note 8 Pro");
 }
 
 void load_begoniain() {
-        property_override("ro.build.fingerprint", "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys");
+        property_override("ro.build.fingerprint", "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys");
         property_override("ro.product.board", "begoniain");
         property_override("ro.product.device", "begoniain");
-        property_override("ro.product.model", "Redmi Note 8 pro");
+        property_override("ro.product.model", "Redmi Note 8 Pro");
+        property_override("ro.product.system.model", "Redmi Note 8 Pro");
+        property_override("ro.product.vendor.model", "Redmi Note 8 Pro");
 }
 
 void load_begonia() {
-        property_override("ro.build.fingerprint", "google/sunfish/sunfish:11/RQ1A.210105.002/6985033:user/release-keys");
+        property_override("ro.build.fingerprint", "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys");
         property_override("ro.product.board", "begonia");
         property_override("ro.product.device", "begonia");
-        property_override("ro.product.model", "Redmi Note 8 pro");
+        property_override("ro.product.model", "Redmi Note 8 Pro");
+        property_override("ro.product.system.model", "Redmi Note 8 Pro");
+        property_override("ro.product.vendor.model", "Redmi Note 8 Pro");
 }
 
 void vendor_load_properties() {
