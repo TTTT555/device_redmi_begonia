@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from begonia device makefile
 $(call inherit-product, device/xiaomi/begonia/device.mk)
 
-# Inherit some common PE stuff.
+# Inherit some common stuff.
 TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_WIFI_EXT := true
@@ -28,7 +28,8 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/ANXCamera/config.mk)
-$(call inherit-product, vendor/trCam/config.mk)
+$(call inherit-product, vendor/burial10/config.mk)
+$(call inherit-product, vendor/viper4androidFX/config.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal

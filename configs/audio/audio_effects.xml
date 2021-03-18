@@ -3,18 +3,17 @@
     <!-- List of effect libraries to load.
          Each library element must contain a "name" attribute and a "path" attribute giving the
          name of a library .so file in /vendor/lib/soundfx on the target
-
          If offloadable effects are present, the AOSP library libeffectproxy.so must be listed as
          well as one library for the SW implementation and one library for the DSP implementation:
          <library name="proxy" path="libeffectproxy.so"/>
          <library name="some_fx_sw" path="lib_some_fx_sw.so"/>
          <library name="some_fx_hw" path="lib_some_fx_hw.so"/>
-
          If the audio HAL implements support for AOSP software audio pre-processing effects,
          the following library must be added:
          <library name="pre_processing" path="libaudiopreprocessing.so"/>
     -->
     <libraries>
+        <library name="v4a_fx" path="libv4a_fx.so"/>
         <library name="bundle" path="libbundlewrapper.so"/>
         <library name="reverb" path="libreverbwrapper.so"/>
         <library name="visualizer" path="libvisualizer.so"/>
@@ -34,13 +33,11 @@
          the effect.
          The uuid is the implementation specific UUID as specified by the effect vendor. This is not
          the generic effect type UUID.
-
          Offloadable effects are described by an "effectProxy" element which contains one "libsw"
          element containing the "uuid" and "library" for the SW implementation and one "libhw"
          element containing the "uuid" and "library" for the DSP implementation.
          The "uuid" value for the "effectProxy" element must be unique and will override the default
          uuid in the AOSP proxy effect implementation.
-
          If the audio HAL implements support for AOSP software audio pre-processing effects,
          the following effects can be added:
          <effect name="agc" library="pre_processing" uuid="aa8130e0-66fc-11e0-bad0-0002a5d5c51b"/>
@@ -49,6 +46,7 @@
     -->
 
     <effects>
+        <effect name="v4a_standard_fx" library="v4a_fx" uuid="41d3c987-e6cf-11e3-a88a-11aba5d5c51b"/>
         <effect name="bassboost" library="bundle" uuid="8631f300-72e2-11df-b57e-0002a5d5c51b"/>
         <effect name="virtualizer" library="bundle" uuid="1d4033c0-8557-11df-9f2d-0002a5d5c51b"/>
         <effect name="equalizer" library="bundle" uuid="ce772f20-847d-11df-bb17-0002a5d5c51b"/>
@@ -93,10 +91,8 @@
               "music", "ring", "alarm", "notification", "voice_call"
          Each "stream" element contains a list of "apply" elements indicating one effect to apply.
          The effect to apply is designated by its name in the "effects" elements.
-
         <postprocess>
             <stream type="music">
-                <apply effect="music_post_proc"/>
             </stream>
             <stream type="voice_call">
                 <apply effect="voice_post_proc"/>
