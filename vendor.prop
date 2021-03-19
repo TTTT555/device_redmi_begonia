@@ -76,7 +76,7 @@ ro.vendor.mtk_tee_gp_support=1
 drm.service.enabled=true
 
 # Display
-debug.cpurend.vsync=1
+debug.cpurend.vsync=0
 debug.sf.disable_backpressure=1
 debug.sf.latch_unsignaled=1
 #debug.sf.early_phase_offset_ns=1500000
