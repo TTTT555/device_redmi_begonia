@@ -77,7 +77,7 @@ drm.service.enabled=true
 
 # Display
 debug.cpurend.vsync=1
-debug.sf.disable_backpressure=0
+debug.sf.disable_backpressure=1
 debug.sf.latch_unsignaled=1
 #debug.sf.early_phase_offset_ns=1500000
 #debug.sf.early_app_phase_offset_ns=1500000
