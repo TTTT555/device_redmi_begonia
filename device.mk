@@ -14,7 +14,12 @@ $(call inherit-product, vendor/mediatek/opensource/mtk-oss.mk)
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
     TrebuchetQuickStep \
-    NexusLauncherRelease
+    NexusLauncherRelease \
+    Launcher3QuickStep \
+    Settings
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootanimation.zip:$(TARGET_COPY_OUT_SYSTEM)/media/bootanimation.zip
 
 # Audio
 PRODUCT_PACKAGES += \

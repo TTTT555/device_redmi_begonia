@@ -864,6 +864,13 @@ on boot
     chmod 0660 /proc/cpufreq/cpufreq_power_mode
     chown system system /proc/cpufreq/enable_hw_gov
     chmod 0660 /proc/cpufreq/enable_hw_gov
+    write /sys/devices/system/cpu/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/schedutil/down_rate_limit_us 100000
+    write /sys/devices/system/cpu/cpufreq/interactive/boostpulse_duration 80000
+    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 99
+    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 80000
+    write /sys/devices/system/cpu/cpufreq/interactive/target_loads 90
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_slack 80000
 
 # BW monitor
     chown system system /proc/fliperfs/cg_enable
