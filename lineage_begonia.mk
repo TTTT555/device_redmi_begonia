@@ -27,9 +27,10 @@ TARGET_INCLUDE_WIFI_EXT := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-$(call inherit-product, vendor/ANXCamera/config.mk)
-$(call inherit-product, vendor/burial10/config.mk)
+# $(call inherit-product, vendor/ANXCamera/config.mk)
+$(call inherit-product, vendor/burial8/config.mk)
 $(call inherit-product, vendor/viper4androidFX/config.mk)
+$(call inherit-product, vendor/dirac/config.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -46,13 +47,13 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Fingerprint
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ1A.210205.004/7038034:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ2A.210505.002/7246365:user/release-keys"
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.build.fingerprint=$(BUILD_FINGERPRINT)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="coral-user 11 RQ1A.210205.004 7038034 release-keys" \
+    PRIVATE_BUILD_DESC="begonia-user 10 QP1A.190711.020 V11.0.5.0.QGGMIXM release-keys" \
     PRODUCT_NAME="begonia" \
     TARGET_DEVICE="begonia"
 
