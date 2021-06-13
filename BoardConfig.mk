@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+TARGET_IGNORES_FTP_PPTP_CONNTRACK_FAILURE := true
+MTK_MEDIA_PROFILES := true
+BOARD_USES_MTK_MEDIA_PROFILES := true
+
 DEVICE_PATH := device/xiaomi/begonia
 MTK_HALS_PATH := vendor/mediatek/opensource
 

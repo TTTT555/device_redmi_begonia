@@ -2,6 +2,9 @@
 # Brand
 Build.BRAND=MTK
 
+# Bluetooth
+persist.bluetooth.avrcpversion=avrcp16
+
 # Camera
 ro.camera.sensor.id_rear=0
 ro.camera.sensor.id_front=1
@@ -32,6 +35,10 @@ sys.ipo.disable=1
 
 # Kernel
 ro.kernel.zio=38,108,105,16
+
+#Misc
+ro.mtk_config_max_dram_size=0x800000000
+persist.tcp.profile=1
 
 # Netflix
 ro.netflix.bsp_rev=MTK6785-18758-1

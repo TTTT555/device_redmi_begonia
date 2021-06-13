@@ -25,8 +25,9 @@ TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/ANXCamera/config.mk)
-$(call inherit-product, vendor/burial10/config.mk)
+$(call inherit-product, vendor/burial8/config.mk)
 $(call inherit-product, vendor/viper4androidFX/config.mk)
+$(call inherit-product, vendor/dirac/config.mk)
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
@@ -43,7 +44,7 @@ PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Fingerprint
-BUILD_FINGERPRINT := "google/coral/coral:11/RQ2A.210305.006/7119741:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:11/RQ2A.210505.002/7246365:user/release-keys"
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.build.fingerprint=$(BUILD_FINGERPRINT)
@@ -56,4 +57,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-02-05
+VENDOR_SECURITY_PATCH := 2021-05-05
